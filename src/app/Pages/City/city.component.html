@@ -1,0 +1,31 @@
+<div class="b-page-2">
+    <div class="b-pointer hideOpacity b-page-2--animate js__animate" data-animate-delay="300" data-animate-class="bounceInUp" >
+        <svg class="b-pointer-svg">
+            <use xlink:href="../assets/img/svg-sprite/svg.svg#Pointer"/>
+        </svg>
+    </div>
+    <div class="b-page-2__header hideOpacity b-page-2--animate js__animate" data-animate-delay="400" data-animate-class="bounceInUp" >
+        <h1>
+            Ваш город
+        </h1>
+    </div>
+    <div class="b-page-2__select hideOpacity b-page-2--animate js__animate" data-animate-delay="500" data-animate-class="bounceInUp" >
+        <select name="" id="">
+            <option value="">Kiev</option>
+            <option value="">Odessa</option>
+            <option value="">Lviv</option>
+        </select>
+       <!-- <select name="" id="select-city">
+            <% _.each(options, function(option, index) { %>
+            <option value="<%=option.value%>" <% index == 0 ? print('selected') : print('')%>> <%=option.region%></option>
+            <% }) %>
+
+        </select>-->
+    </div>
+    <div class="b-page-2__button hideOpacity b-page-2--animate js__animate" data-animate-delay="600" data-animate-class="bounceInUp" >
+        <a routerLink="/event" routerLinkActive="active" class="btn margin_auto btn-select-city">
+            <span>Далее</span>
+        </a>
+    </div>
+
+</div>
