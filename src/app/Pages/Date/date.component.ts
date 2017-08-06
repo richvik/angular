@@ -1,6 +1,5 @@
 import {Component, AfterViewInit , EventEmitter} from '@angular/core';
 import {GlobalService} from '../../Service/global-service.service';
-import $ from 'jquery';
 
 @Component({
     selector: 'date',
