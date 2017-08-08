@@ -7,8 +7,9 @@ var db = require('./db');
 var artistsController = require('./node_js/controlers/artists');
 
 var app = express ();
-app.use (bodyParser.json ());
-app.use (bodyParser.urlencoded ({extended: true}));
+var api = express ();
+api.use (bodyParser.json ());
+api.use (bodyParser.urlencoded ({extended: true}));
 
 
 app.get ('/', function (req, res) {
@@ -16,24 +17,26 @@ app.get ('/', function (req, res) {
 });
 
 //return artists
-app.get ('/artists', artistsController.all);
+api.get ('/artists', artistsController.all);
 
-app.get ('/artists/:id', artistsController.findById);
+api.get ('/artists/:id', artistsController.findById);
 
-app.post ('/artists', artistsController.create);
+api.post ('/artists', artistsController.create);
 
-app.put ('/artists/:id', artistsController.update);
-app.delete ('/artists/:id', artistsController.delete);
-
-
-app.post ('/filter', artistsController.filterObject);
+api.put ('/artists/:id', artistsController.update);
+api.delete ('/artists/:id', artistsController.delete);
 
 
+api.post ('/filter', artistsController.filterObject);
+
+app.use('/api', api);
+
+//my-syte.com/filter
 db.connect ('mongodb://localhost:27017/myapi', function (err) {
     if (err) {
         return console.log (err);
     }
-    app.listen (4300, function () {
+    app.listen (80, function () {
         console.log ('API app started');
     });
 });
