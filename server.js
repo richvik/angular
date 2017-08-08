@@ -12,7 +12,7 @@ api.use (bodyParser.json ());
 api.use (bodyParser.urlencoded ({extended: true}));
 
 
-app.get ('/', function (req, res) {
+api.get ('/test', function (req, res) {
     res.send ('Hello Api')
 });
 
@@ -30,13 +30,14 @@ api.delete ('/artists/:id', artistsController.delete);
 api.post ('/filter', artistsController.filterObject);
 
 app.use('/api', api);
+app.use('/', express.static("./dist"));
 
 //my-syte.com/filter
 db.connect ('mongodb://localhost:27017/myapi', function (err) {
     if (err) {
         return console.log (err);
     }
-    app.listen (80, function () {
+    app.listen (4300, function () {
         console.log ('API app started');
     });
 });
