@@ -10,9 +10,9 @@
         </h1>
     </div>
     <div class="b-page-2__select hideOpacity b-page-2--animate js__animate" data-animate-delay="500" data-animate-class="bounceInUp" >
-       <!-- <select name="" id="" *ngIf="todos.length" >
-            <option *ngFor="let item of items" value="{{item.id}}">{{item.name}}</option>
-        </select>-->
+        <select name="" id="" *ngIf="cities.length" >
+            <option *ngFor="let item of cities" value="{{item.id}}">{{item.name}}</option>
+        </select>
        <!-- <select name="" id="select-city">
             <% _.each(options, function(option, index) { %>
             <option value="<%=option.value%>" <% index == 0 ? print('selected') : print('')%>> <%=option.region%></option>

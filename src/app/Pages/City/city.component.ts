@@ -10,14 +10,18 @@ import {HttpService} from '../../Service/http.service';
 })
 
 export class CityComponent implements OnInit {
+    cities = [];
     constructor(private globalService: GlobalService, private http: HttpService) {
     }
 
     ngOnInit(): void {
         this.globalService.showAnimations('.js__animate');
         this.globalService.changeMainBG('0.6', true)
+        this.http.getData().then(item => {
+            this.cities = item;
+            console.log(this.cities);
+        });
 
-        console.log(this.http.getData());
     }
 
     getCity() {

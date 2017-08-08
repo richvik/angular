@@ -10,7 +10,6 @@ export class HttpService{
 
     constructor(private http: Http){ }
 
-
     getData(){
         return this.http.get(this.heroesUrl)
             .toPromise()
