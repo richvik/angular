@@ -7,6 +7,12 @@ exports.all = function (cb) {
     })
 };
 
+exports.city = function (cb) {
+    db.get ().collection ('city').find ().toArray (function (err, doc) {
+        cb (err, doc)
+    })
+};
+
 exports.findById = function (id, cb) {
     db.get ().collection ('artists').findOne ({_id: ObjectID (id)}, function (err, doc) {
         cb (err, doc)

@@ -10,6 +10,16 @@ exports.all = function (req, res) {
     })
 };
 
+exports.city = function (req, res) {
+    Artists.city (function (err, doc) {
+        if (err) {
+            console.log (err);
+            return res.sendStatus (500)
+        }
+        res.send (doc)
+    })
+};
+
 exports.findById = function (req, res) {
     // {_id:ObjectID(req.params.id)}
     Artists.findById (req.params.id, function (err, doc) {

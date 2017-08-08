@@ -15,4 +15,7 @@ export class MainComponent implements OnInit {
       this.globalService.changeMainBG('1',true)
       this.globalService.changeClassHtmlOnRoute('html-main')
   }
+  getData(){
+
+  }
 }

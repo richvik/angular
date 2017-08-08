@@ -4,7 +4,7 @@ var bodyParser = require ('body-parser');
 var MongoClient = require ('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var db = require('./db');
-var artistsController = require('./node_js/controlers/artists');
+var mainController = require('./node_js/controlers/artists');
 
 var app = express ();
 var api = express ();
@@ -17,17 +17,19 @@ api.get ('/test', function (req, res) {
 });
 
 //return artists
-api.get ('/artists', artistsController.all);
+api.get ('/artists', mainController.all);
 
-api.get ('/artists/:id', artistsController.findById);
+api.get ('/artists/:id', mainController.findById);
 
-api.post ('/artists', artistsController.create);
+api.post ('/artists', mainController.create);
 
-api.put ('/artists/:id', artistsController.update);
-api.delete ('/artists/:id', artistsController.delete);
+api.put ('/artists/:id', mainController.update);
+api.delete ('/artists/:id', mainController.delete);
 
 
-api.post ('/filter', artistsController.filterObject);
+api.post ('/filter', mainController.filterObject);
+
+api.get ('/city', mainController.city);
 
 app.use('/api', api);
 app.use('/', express.static("./dist"));
