@@ -20,7 +20,7 @@ exports.findById = function (id, cb) {
 };
 
 exports.create = function (artist, cb) {
-    db.get ().collection ('artists').insert (artist, function (err, result) {
+    db.get ().collection ('events').insert (artist, function (err, result) {
         cb (err, result)
     })
 };
@@ -38,7 +38,7 @@ exports.delete = function (id, cb) {
 };
 
 exports.filterObject = function (obj,cb) {
-    db.get().collection('artists').find(obj).toArray(function(err,docs){
+    db.get().collection('events').find(obj).toArray(function(err,docs){
        cb(err,docs)
     })
 

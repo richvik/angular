@@ -12,137 +12,46 @@
 
             <div class="b-filter__mobile b-filter__mobile--drop">
                 <ul>
-                    <li class="b-filter--active"><span>Все</span></li>
-                    <li data-link="1"><span>Театры</span></li>
-                    <li data-link="2"><span>Клубы/бары</span></li>
-                    <li data-link="3"><span>Концерты/фестивали</span></li>
-                    <li data-link="4"><span>Мастерклассы</span></li>
+                    <li (click)="liClicked(0)" class="b-filter--active"><span>Все</span></li>
+                    <li (click)="liClicked(1)" data-link="1"><span>Театры</span></li>
+                    <li (click)="liClicked(2)" data-link="2"><span>Клубы/бары</span></li>
+                    <li (click)="liClicked(3)" data-link="3"><span>Концерты/фестивали</span></li>
+                    <li (click)="liClicked(4)" data-link="4"><span>Мастерклассы</span></li>
                 </ul>
             </div>
 
         </div>
-        <div class="b-result-wrapper">
-            <div class="b-result-item">
-                <div class="b-result__photo">
-                    <img src="https://sxodim.com/uploads/astana/2017/05/teatr.jpeg"
-                         alt="">
-                </div>
-                <div class="b-result__title">
-                    <p>
-                        Выставка
-                    </p>
-                </div>
-                <div class="b-result__header">
-                    <h3>
-                        Искусство взаимодействия
-                    </h3>
-                </div>
-                <div class="b-result__content">
-                    <p>
-                        Кинетические и аудиовизуальные работы – вся классика science-art в одном месте. Это
-                        именно та выставка, где можно и нужно все трогать...
-                    </p>
-                </div>
-            </div>
-            <div class="b-result-item">
-                <div class="b-result__photo">
-                    <img src="https://sxodim.com/uploads/astana/2017/05/teatr.jpeg"
-                         alt="">
-                </div>
-                <div class="b-result__title">
-                    <p>
-                        Выставка
-                    </p>
-                </div>
-                <div class="b-result__header">
-                    <h3>
-                        Искусство взаимодействия
-                    </h3>
-                </div>
-                <div class="b-result__content">
-                    <p>
-                        Кинетические и аудиовизуальные работы – вся классика science-art в одном месте. Это
-                        именно та выставка, где можно и нужно все трогать...
-                    </p>
-                </div>
-            </div>
-            <div class="b-result-item">
-                <div class="b-result__photo">
-                    <img src="https://sxodim.com/uploads/astana/2017/05/teatr.jpeg"
-                         alt="">
-                </div>
-                <div class="b-result__title">
-                    <p>
-                        Выставка
-                    </p>
-                </div>
-                <div class="b-result__header">
-                    <h3>
-                        Искусство взаимодействия
-                    </h3>
-                </div>
-                <div class="b-result__content">
-                    <p>
-                        Кинетические и аудиовизуальные работы – вся классика science-art в одном месте. Это
-                        именно та выставка, где можно и нужно все трогать...
-                    </p>
-                </div>
-            </div>
-            <div class="b-result-item">
-                <div class="b-result__photo b-no-photo--film">
-                    <img src=""
-                         alt="">
-                </div>
-                <div class="b-result__title">
-                    <p>
-                        Выставка
-                    </p>
-                </div>
-                <div class="b-result__header">
-                    <h3>
-                        Искусство взаимодействия
-                    </h3>
-                </div>
-                <div class="b-result__content">
-                    <p>
-                        Кинетические и аудиовизуальные работы – вся классика science-art в одном месте. Это
-                        именно та выставка, где можно и нужно все трогать...
-                    </p>
-                </div>
-            </div>
-            <div class="b-result-item">
-                <div class="b-result__photo b-no-photo--film">
-                    <img src=""
-                         alt="">
-                </div>
-                <div class="b-result__title">
-                    <p>
-                        Выставка
-                    </p>
-                </div>
-                <div class="b-result__header">
-                    <h3>
-                        Искусство взаимодействия
-                    </h3>
-                </div>
-                <div class="b-result__content">
-                    <p>
-                        Кинетические и аудиовизуальные работы – вся классика science-art в одном месте. Это
-                        именно та выставка, где можно и нужно все трогать...
-                    </p>
-                </div>
-            </div>
-            <div class="b-result-item">
-                <div class="b-result-other">
-                    <div class="verMiddle">
+        <div class="b-result-wrapper" *ngIf="filterEvents.length">
+            <div class="b-result-item" *ngFor="let event of filterEvents">
+                <a href=" {{event.link}}" target="_blank">
 
+                    <div class="b-result__photo {{event.no_photo}}" *ngIf="event.image === null">
+
+                    </div>
+
+                    <div class="b-result__photo" *ngIf="event.image !== null  ">
+
+                        <img src="http://linex.afisha.ru{{event.image}}"  alt="">
+                    </div>
+
+                    <div class="b-result__title">
                         <p>
-                            Показать другие события
+                            {{event.type}}
                         </p>
                     </div>
-                </div>
-
+                    <div class="b-result__header">
+                        <h3>
+                            {{event.name}}
+                        </h3>
+                    </div>
+                    <div class="b-result__content is-truncated" style="word-wrap: break-word;">
+                        <p>
+                            {{event.text}}
+                        </p>
+                    </div>
+                </a>
             </div>
+
         </div>
         <div class="b-button-repeat">
             <a routerLink="" routerLinkActive="active" class="btn b-btn-repeat margin_auto">

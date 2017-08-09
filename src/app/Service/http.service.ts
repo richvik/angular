@@ -1,16 +1,17 @@
 import {Injectable} from '@angular/core';
-import {Headers,Http} from '@angular/http';
+import {Headers, Http} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 @Injectable()
-export class HttpService{
+export class HttpService {
 
     private headers = new Headers({'Content-Type': 'application/json'});
     private heroesUrl = 'api/heroes';  // URL to web api
 
-    constructor(private http: Http){ }
+    constructor(private http: Http) {
+    }
 
-    getData(){
+    getData() {
         return this.http.get(this.heroesUrl)
             .toPromise()
             .then(response => response.json().data)

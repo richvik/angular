@@ -19,7 +19,7 @@ import {PagesModule} from './Pages/pages.module'
 // pages
 
 @NgModule({
-  imports: [BrowserModule, PagesModule, FormsModule, HttpModule, AppRoutingModule, InMemoryWebApiModule.forRoot(InMemoryDataService),],
+  imports: [BrowserModule, PagesModule, FormsModule, HttpModule, AppRoutingModule],
   declarations: [AppComponent],
   providers: [GlobalService],
   bootstrap: [AppComponent]

@@ -21,13 +21,15 @@ api.get ('/artists', mainController.all);
 
 api.get ('/artists/:id', mainController.findById);
 
-api.post ('/artists', mainController.create);
+api.post ('/eventCreate', mainController.create);
 
 api.put ('/artists/:id', mainController.update);
 api.delete ('/artists/:id', mainController.delete);
 
 
-api.post ('/filter', mainController.filterObject);
+
+//new data
+api.post ('/events', mainController.filterObject);
 
 api.get ('/city', mainController.city);
 

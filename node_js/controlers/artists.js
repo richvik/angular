@@ -62,11 +62,6 @@ exports.delete = function (req, res) {
 };
 
 exports.filterObject = function (req, res) {
-    console.log(req.body, req.params);
-    var getName = {
-       name: req.body.name
-    };
-    // {name: "Mustang"}
     Artists.filterObject (req.body, function (err, doc) {
         if (err) {
             console.log (err);
