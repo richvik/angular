@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, HostBinding } from '@angular/core';
 import {GlobalService} from '../../Service/global-service.service';
 
 import {HttpClient} from '../../Service/http-client';
@@ -12,7 +12,8 @@ import {HttpClient} from '../../Service/http-client';
 
 export class ResultComponent implements OnInit {
     filterEvents = [];
-
+    active = false;
+    @HostBinding('class.b-filter--active') isActive = false;
     constructor(private globalService: GlobalService, private http: HttpClient) {
     }
 
@@ -24,14 +25,25 @@ export class ResultComponent implements OnInit {
         this.getResult();
     }
 
-    liClicked(currentID){
+    liClicked(currentID, element){
         let obj = {
             'category_id': currentID
         };
         this.http.postResult('api/events', obj).subscribe(item => {
             this.filterEvents = item;
             console.log(item);
-        })
+        });
+        console.log(element);
+    }
+    toggle() {
+        this.isActive = !this.isActive;
+    }
+    toggleClass(){
+        if(this.active){
+            return 'b-filter--active';
+        } else {
+            return '';
+        }
     }
 
     getResult() {
