@@ -4,24 +4,24 @@
             Рекомендуем вам
         </h2>
     </div>
-    <div data-animate-delay="600" data-animate-class="bounceInUp" class="b-page-6__content  b-page--animate hideOpacity js__animate">
-        <div class="b-filter">
+    <div data-animate-delay="1100" data-animate-class="bounceInUp" class="b-page-6__content  b-page--animate hideOpacity js__animate">
+        <div data-animate-delay="900" data-animate-class="bounceInUp" class="b-filter">
             <div class="b-filter__mobile b-filter__mobile--current"><span>Все</span>
                 <i class="triangle"></i>
             </div>
 
             <div class="b-filter__mobile b-filter__mobile--drop">
                 <ul>
-                    <li #filter0 (click)="liClicked(0,isClicked=1)" [class.b-filter--active]="isClicked==1" class="b-filter--active"><span>Все</span></li>
-                    <li #filter1 (click)="liClicked(1,isClicked=2)" [class.b-filter--active]="isClicked==2" data-link="1"><span>Театры</span></li>
-                    <li #filter2 (click)="liClicked(2,isClicked=3)" [class.b-filter--active]="isClicked==3" data-link="2"><span>Клубы/бары</span></li>
-                    <li #filter3 (click)="liClicked(3,isClicked=4)" [class.b-filter--active]="isClicked==4" data-link="3"><span>Концерты/фестивали</span></li>
-                    <li #filter4 (click)="liClicked(4,isClicked=5)" [class.b-filter--active]="isClicked==5" data-link="4"><span>Мастерклассы</span></li>
+                    <li (click)="liClicked(0,isClicked=1)" [class.b-filter--active]="isClicked==1" class="b-filter--active"><span>Все</span></li>
+                    <li (click)="liClicked(1,isClicked=2)" [class.b-filter--active]="isClicked==2" data-link="1"><span>Театры</span></li>
+                    <li (click)="liClicked(2,isClicked=3)" [class.b-filter--active]="isClicked==3" data-link="2"><span>Клубы/бары</span></li>
+                    <li (click)="liClicked(3,isClicked=4)" [class.b-filter--active]="isClicked==4" data-link="3"><span>Концерты/фестивали</span></li>
+                    <li (click)="liClicked(4,isClicked=5)" [class.b-filter--active]="isClicked==5" data-link="4"><span>Мастерклассы</span></li>
                 </ul>
             </div>
 
         </div>
-        <div class="b-result-wrapper" *ngIf="filterEvents.length">
+        <div data-animate-delay="1100" data-animate-class="bounceInUp" class="b-result-wrapper js__animate b-page--animate" *ngIf="filterEvents.length">
             <div class="b-result-item" *ngFor="let event of filterEvents">
                 <a href=" {{event.link}}" target="_blank">
 

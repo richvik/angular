@@ -1,3 +1,6 @@
 mongodump -h localhost
 
 mongorestore --verbose --db myapi D:\Projects\Linex\angular-git\mongoDB\copy\myapi
+
+
+C:\Program Files\MongoDB\Server\3.4\bin
