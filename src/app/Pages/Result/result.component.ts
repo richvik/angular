@@ -20,7 +20,6 @@ export class ResultComponent implements OnInit {
         this.globalService.showAnimations('.js__animate');
         this.globalService.changeMainBG('0.1', false);
         this.globalService.changeClassHtmlOnRoute('html-result');
-        console.log(        document.querySelectorAll('.js__animate').length);
 
         this.getResult();
     }
@@ -56,9 +55,6 @@ export class ResultComponent implements OnInit {
 
         this.http.postResult('api/events', obj).subscribe(item => {
             this.filterEvents = item;
-            this.globalService.showAnimations('.js__animate');
-            console.log(        document.querySelectorAll('.js__animate').length);
-
         })
     }
 }

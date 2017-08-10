@@ -1,11 +1,11 @@
 <div class="b-page-6">
-    <div data-animate-delay="600" data-animate-class="bounceInUp" class="b-page-6__header  b-page--animate hideOpacity js__animate">
+    <div data-animate-delay="500" data-animate-class="bounceInUp" class="b-page-6__header  b-page--animate hideOpacity js__animate">
         <h2>
             Рекомендуем вам
         </h2>
     </div>
-    <div data-animate-delay="1100" data-animate-class="bounceInUp" class="b-page-6__content  b-page--animate hideOpacity js__animate">
-        <div data-animate-delay="900" data-animate-class="bounceInUp" class="b-filter">
+    <div class="b-page-6__content  b-page--animate">
+        <div data-animate-delay="800" data-animate-class="bounceInUp" class="b-filter hideOpacity js__animate">
             <div class="b-filter__mobile b-filter__mobile--current"><span>Все</span>
                 <i class="triangle"></i>
             </div>
@@ -21,7 +21,7 @@
             </div>
 
         </div>
-        <div data-animate-delay="1100" data-animate-class="bounceInUp" class="b-result-wrapper js__animate b-page--animate" *ngIf="filterEvents.length">
+        <div data-animate-delay="1200" data-animate-class="bounceInUp" class="b-result-wrapper js__animate hideOpacity">
             <div class="b-result-item" *ngFor="let event of filterEvents">
                 <a href=" {{event.link}}" target="_blank">
 

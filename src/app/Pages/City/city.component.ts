@@ -28,4 +28,7 @@ export class CityComponent implements OnInit {
             this.cities = item;
         });
     }
+    selectCity(event){
+        console.log(event);
+    }
 }
