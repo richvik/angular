@@ -1,4 +1,4 @@
-import {Component, OnInit, HostBinding } from '@angular/core';
+import {Component, OnInit, HostBinding} from '@angular/core';
 import {GlobalService} from '../../Service/global-service.service';
 
 import {HttpClient} from '../../Service/http-client';
@@ -7,12 +7,13 @@ import {HttpClient} from '../../Service/http-client';
     selector: 'result',
     templateUrl: './result.component.html',
     styleUrls: ['./result.component.styl'],
-    providers: [GlobalService, HttpClient]
+    providers: [HttpClient]
 })
 
 export class ResultComponent implements OnInit {
     filterEvents = [];
     isClicked = false;
+
     constructor(private globalService: GlobalService, private http: HttpClient) {
     }
 
@@ -23,14 +24,13 @@ export class ResultComponent implements OnInit {
 
         this.getResult();
     }
-
-    liClicked(currentID, element){
+    liClicked(currentID, element) {
         let obj = {};
 
-        if(currentID === 0){
+        if (currentID === 0) {
             obj = {};
-        }else{
-            obj = {"category_id": currentID};
+        } else {
+            obj = {'category_id': currentID};
         }
 
         this.http.postResult('api/events', obj).subscribe(item => {
@@ -40,8 +40,8 @@ export class ResultComponent implements OnInit {
         this.toggleClass()
     }
 
-    toggleClass(){
-        if(this.isClicked){
+    toggleClass() {
+        if (this.isClicked) {
             return 'b-filter--active';
         } else {
             return '';
@@ -49,11 +49,10 @@ export class ResultComponent implements OnInit {
     }
 
     getResult() {
-        let obj = {
-            // 'id': 39
-    };
-
-        this.http.postResult('api/events', obj).subscribe(item => {
+        const test ={city_id: "1", preference: "Пойти развлечься", mood: "Хорошее"};
+        // let resultSendObject = this.globalService.objectSend;
+        // console.log(resultSendObject);
+        this.http.postResult('api/events', test).subscribe(item => {
             this.filterEvents = item;
         })
     }

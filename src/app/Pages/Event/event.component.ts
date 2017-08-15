@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 @Component({
     selector: 'event',
     templateUrl: './event.component.html',
-    styleUrls: ['./event.component.styl'],
-    providers: [GlobalService]
+    styleUrls: ['./event.component.styl']
 })
 
 
@@ -21,7 +20,8 @@ export class EventComponent implements OnInit {
 
     }
 
-    changeEvent() {
+    changeEvent(event) {
+        this.globalService.objectSend['preference'] = event.target.value;
         this.router.navigate(['/date']);
     }
 }

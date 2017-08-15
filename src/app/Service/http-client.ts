@@ -17,13 +17,6 @@ export class HttpClient {
             btoa('username:password'));
     }
 
-    get(url) {
-        let headers = new Headers();
-        this.createAuthorizationHeader(headers);
-        return this.http.get(url, {
-            headers: headers
-        });
-    }
     getData(url) {
         return this.http.get(url)
             .map(res => res.json());

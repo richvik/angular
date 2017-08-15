@@ -7,8 +7,6 @@ import { AppRoutingModule } from './RoutesModule/app-routing.module';
 import { AppComponent } from './app.component';
 
 
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService }  from './Service/data.service';
 
 import {GlobalService} from './Service/global-service.service';
 

@@ -4,8 +4,7 @@ import {GlobalService} from '../../Service/global-service.service';
 @Component({
     selector: 'date',
     templateUrl: './date.component.html',
-    styleUrls: ['./date.component.styl'],
-    providers: [GlobalService]
+    styleUrls: ['./date.component.styl']
 })
 
 

@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
     constructor(private globalService: GlobalService) {}
 
     ngOnInit() {
-        console.log('init');
         // this.showAnimations();
         // this.globalService.showAnimations('.js__animate');
 

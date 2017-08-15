@@ -8,7 +8,7 @@ import {HttpClient} from '../../Service/http-client';
     selector: 'city',
     templateUrl: './city.component.html',
     styleUrls: ['./city.component.styl'],
-    providers: [GlobalService, HttpClient]
+    providers: [HttpClient]
 })
 
 export class CityComponent implements OnInit {
@@ -28,7 +28,8 @@ export class CityComponent implements OnInit {
             this.cities = item;
         });
     }
-    selectCity(event){
-        console.log(event);
+
+    selectCity(event) {
+        this.globalService.objectSend['city_id'] = event.value;
     }
 }

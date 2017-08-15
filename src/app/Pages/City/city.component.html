@@ -10,9 +10,11 @@
         </h1>
     </div>
     <div class="b-page-2__select hideOpacity b-page-2--animate js__animate" data-animate-delay="500" data-animate-class="bounceInUp" >
-        <select name="" id="" *ngIf="cities.length" (change)="selectCity($event)">
-            <option *ngFor="let item of cities" value="{{item.id}}">{{item.name}}</option>
+        <select name="" #selectedCategory id="" *ngIf="cities.length" (change)="selectCity(selectedCategory)">
+            <option selected value="0">Выберите город</option>
+            <option *ngFor="let item of cities" [value]="item.id">{{item.name}}</option>
         </select>
+
     </div>
     <div class="b-page-2__button hideOpacity b-page-2--animate js__animate" data-animate-delay="600" data-animate-class="bounceInUp" >
         <a routerLink="/event" routerLinkActive="active" class="btn margin_auto btn-select-city">

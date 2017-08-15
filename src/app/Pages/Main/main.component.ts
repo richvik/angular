@@ -4,8 +4,7 @@ import {GlobalService} from '../../Service/global-service.service';
 @Component({
   selector: 'index',
   templateUrl: './main.component.html',
-  styleUrls: [ './main.component.styl' ],
-  providers: [GlobalService]
+  styleUrls: [ './main.component.styl' ]
 })
 export class MainComponent implements OnInit {
   constructor(private globalService: GlobalService) {}

@@ -1,4 +1,7 @@
 export class GlobalService {
+    public objectSend = {};
+
+
     showAnimations(className) {
         const animateSelector = document.querySelectorAll(className);
         const keysCurrentObject = Object.keys(animateSelector);
@@ -25,19 +28,9 @@ export class GlobalService {
             selectorBG.classList.add('slide');
         }
     }
-
     changeClassHtmlOnRoute(currentClass) {
         let mainHTML = document.getElementById('html');
         mainHTML.classList.remove('html-result', 'html-main');
         mainHTML.classList.add(currentClass)
-    }
-
-    initPlugins() {
-
-    /*    $("select").select2({
-            minimumResultsForSearch: Infinity,
-            width: '100%'
-
-        });*/
     }
 }
