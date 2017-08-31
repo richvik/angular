@@ -6,10 +6,7 @@ import { AppRoutingModule } from './RoutesModule/app-routing.module';
 
 import { AppComponent } from './app.component';
 
-
-
 import {GlobalService} from './Service/global-service.service';
-
 
 // import { ProductsComponent }  from './Products/products.component';
 import {PagesModule} from './Pages/pages.module'

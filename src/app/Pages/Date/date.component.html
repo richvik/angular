@@ -21,16 +21,21 @@
 
     </div>
     <div data-animate-delay="900" data-animate-class="bounceInUp" id="datepicker" class="js__animate b-page--animate"></div>
-    <div class="b-time__wrapper">
-        <div data-animate-delay="1100" data-animate-class="bounceInUp" class="js__animate b-time__button b-main--topHide hideOpacity">
+ <!--   <div class="b-time__wrapper">
+        <div data-animate-delay="1100" data-animate-class="bounceInUp" class="js__animate b-time__button b-main&#45;&#45;topHide hideOpacity">
             <a routerLinkActive="active" routerLink="/mood"  class="btn time-btn margin_auto">
                 <span>Начать</span>
             </a>
         </div>
-        <div data-animate-delay="1300" data-animate-class="bounceInUp" class="js__animate b-time__button--mobile b-main--topHide">
-            <a routerLinkActive="active" routerLink="/mood" class="btn time-btn--mobile ">
+        <div data-animate-delay="1300" data-animate-class="bounceInUp" class="js__animate b-time__button&#45;&#45;mobile b-main&#45;&#45;topHide">
+            <a routerLinkActive="active" routerLink="/mood" class="btn time-btn&#45;&#45;mobile ">
                 <span>Выбрать</span>
             </a>
         </div>
-    </div>
+    </div>-->
+
+    <ng2-datepicker [options]="options" [(ngModel)]="date"></ng2-datepicker>
+<!--
+    <input [mdDatepicker]="myDatepicker">
+<md-datepicker #myDatepicker></md-datepicker>-->
 </div>
