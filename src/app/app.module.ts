@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 
 import {GlobalService} from './Service/global-service.service';
 
-// import { ProductsComponent }  from './Products/products.component';
 import {PagesModule} from './Pages/pages.module'
 
 // pages
@@ -20,5 +19,4 @@ import {PagesModule} from './Pages/pages.module'
   bootstrap: [AppComponent]
 })
 export class AppModule {
-
 }
