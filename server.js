@@ -37,7 +37,7 @@ app.use('/api', api);
 app.use('/', express.static("./dist"));
 
 //my-syte.com/filter
-db.connect ('mongodb://localhost:27017/myapi', function (err) {
+db.connect ('mongodb://heroku_prggrgt6:ur1cs7r3pkn13gc79or25d5p2f@ds117965.mlab.com:17965/heroku_prggrgt6', function (err) {
     if (err) {
         return console.log (err);
     }
