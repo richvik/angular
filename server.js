@@ -34,7 +34,7 @@ api.post ('/events', mainController.filterObject);
 api.get ('/city', mainController.city);
 
 app.use('/api', api);
-app.use('/', express.static("./build"));
+app.use('/', express.static("./dist"));
 
 //my-syte.com/filter
 db.connect ('mongodb://localhost:27017/myapi', function (err) {
