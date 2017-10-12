@@ -1,6 +1,8 @@
 var express = require ('express');
 var bodyParser = require ('body-parser');
 
+var port = process.env.PORT || 8080;
+
 var MongoClient = require ('mongodb').MongoClient;
 var ObjectID = require('mongodb').ObjectID;
 var db = require('./db');
@@ -41,7 +43,7 @@ db.connect ('mongodb://heroku_prggrgt6:ur1cs7r3pkn13gc79or25d5p2f@ds117965.mlab.
     if (err) {
         return console.log (err);
     }
-    app.listen (8080, function () {
+    app.listen (port, function () {
         console.log ('API app started');
     });
 });
