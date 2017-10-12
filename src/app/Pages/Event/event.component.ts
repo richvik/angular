@@ -22,6 +22,6 @@ export class EventComponent implements OnInit {
 
     changeEvent(event) {
         this.globalService.objectSend['preference'] = event.target.value;
-        this.router.navigate(['/date']);
+        this.router.navigate(['/mood']);
     }
 }
