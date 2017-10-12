@@ -25,11 +25,11 @@
             <div class="b-result-item" *ngFor="let event of filterEvents">
                 <a href=" {{event.link}}" target="_blank">
 
-                    <div class="b-result__photo {{event.no_photo}}" *ngIf="event.image === null">
+                    <div class="b-result__photo {{event.no_photo}}" *ngIf="event.image === ''">
 
                     </div>
 
-                    <div class="b-result__photo" *ngIf="event.image !== null  ">
+                    <div class="b-result__photo" *ngIf="event.image !== ''  ">
 
                         <img src="http://linex.afisha.ru{{event.image}}"  alt="">
                     </div>

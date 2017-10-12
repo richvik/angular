@@ -49,7 +49,8 @@ export class ResultComponent implements OnInit {
     }
 
     getResult() {
-        const test ={city_id: "1", preference: "Пойти развлечься", mood: "Хорошее"};
+        const test ={};
+        // const test ={type: "Концерт"};
         // let resultSendObject = this.globalService.objectSend;
         // console.log(resultSendObject);
         this.http.postResult('api/events', test).subscribe(item => {
