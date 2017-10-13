@@ -12,7 +12,7 @@
     <div class="b-page-2__select hideOpacity b-page-2--animate js__animate" data-animate-delay="500" data-animate-class="bounceInUp" >
         <select name="" #selectedCategory id="" *ngIf="cities.length" (change)="selectCity(selectedCategory)">
             <option selected value="0">Выберите город</option>
-            <option *ngFor="let item of cities" [value]="item.id">{{item.name}}</option>
+            <option *ngFor="let item of cities" [value]="item.cityID">{{item.cityName}}</option>
         </select>
 
     </div>
