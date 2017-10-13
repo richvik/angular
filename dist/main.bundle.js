@@ -81,7 +81,7 @@ var CityComponent = (function () {
     return CityComponent;
 }());
 CityComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'city',
         template: __webpack_require__("../../../../../src/app/Pages/City/city.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/City/city.component.styl")],
@@ -183,7 +183,7 @@ var DateComponent = (function () {
     return DateComponent;
 }());
 DateComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'date',
         template: __webpack_require__("../../../../../src/app/Pages/Date/date.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/Date/date.component.styl")],
@@ -257,7 +257,7 @@ var EventComponent = (function () {
     return EventComponent;
 }());
 EventComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'event',
         template: __webpack_require__("../../../../../src/app/Pages/Event/event.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/Event/event.component.styl")]
@@ -327,7 +327,7 @@ var MainComponent = (function () {
     return MainComponent;
 }());
 MainComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'index',
         template: __webpack_require__("../../../../../src/app/Pages/Main/main.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/Main/main.component.styl")]
@@ -401,7 +401,7 @@ var MoodComponent = (function () {
     return MoodComponent;
 }());
 MoodComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'mood',
         template: __webpack_require__("../../../../../src/app/Pages/Mood/mood.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/Mood/mood.component.styl")]
@@ -508,7 +508,7 @@ var ResultComponent = (function () {
     return ResultComponent;
 }());
 ResultComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'result',
         template: __webpack_require__("../../../../../src/app/Pages/Result/result.component.html"),
         styles: [__webpack_require__("../../../../../src/app/Pages/Result/result.component.styl")],
@@ -714,7 +714,7 @@ var HttpClient = (function () {
     return HttpClient;
 }());
 HttpClient = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["e" /* Injectable */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Injectable */])(),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* Http */]) === "function" && _a || Object])
 ], HttpClient);
 
@@ -777,7 +777,7 @@ var AppComponent = (function () {
     return AppComponent;
 }());
 AppComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Component */])({
         selector: 'app-root',
         template: __webpack_require__("../../../../../src/app/app.component.html"),
         styles: [__webpack_require__("../../../../../src/app/app.component.styl")],
@@ -803,7 +803,6 @@ var _a;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Service_global_service_service__ = __webpack_require__("../../../../../src/app/Service/global-service.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Pages_pages_module__ = __webpack_require__("../../../../../src/app/Pages/pages.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -811,7 +810,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -830,7 +828,7 @@ AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         imports: [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_7__Pages_pages_module__["a" /* PagesModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */], __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */], __WEBPACK_IMPORTED_MODULE_4__RoutesModule_app_routing_module__["a" /* AppRoutingModule */]],
         declarations: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]],
-        providers: [__WEBPACK_IMPORTED_MODULE_6__Service_global_service_service__["a" /* GlobalService */], { provide: __WEBPACK_IMPORTED_MODULE_8__angular_common__["a" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_8__angular_common__["b" /* HashLocationStrategy */] }],
+        providers: [__WEBPACK_IMPORTED_MODULE_6__Service_global_service_service__["a" /* GlobalService */]],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);

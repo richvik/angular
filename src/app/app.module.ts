@@ -9,13 +9,13 @@ import { AppComponent } from './app.component';
 import {GlobalService} from './Service/global-service.service';
 
 import {PagesModule} from './Pages/pages.module'
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 // pages
 
 @NgModule({
   imports: [BrowserModule, PagesModule, FormsModule, HttpModule, AppRoutingModule],
   declarations: [AppComponent],
-  providers: [GlobalService,{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  providers: [GlobalService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
