@@ -10,7 +10,7 @@ import { MainComponent } from '../Pages/Main/main.component';
 
 const routes: Routes = [
   // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: '',  component: MainComponent },
+  { path: '',pathMatch: 'full',  component: MainComponent },
 ];
 
 @NgModule({

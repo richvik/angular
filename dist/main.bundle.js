@@ -553,11 +553,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: 'city', component: __WEBPACK_IMPORTED_MODULE_4__City_city_component__["a" /* CityComponent */], },
-    { path: 'event', component: __WEBPACK_IMPORTED_MODULE_5__Event_event_component__["a" /* EventComponent */] },
-    { path: 'date', component: __WEBPACK_IMPORTED_MODULE_6__Date_date_component__["a" /* DateComponent */] },
-    { path: 'mood', component: __WEBPACK_IMPORTED_MODULE_7__Mood_mood_component__["a" /* MoodComponent */] },
-    { path: 'result', component: __WEBPACK_IMPORTED_MODULE_8__Result_result_component__["a" /* ResultComponent */] },
+    { path: 'city', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_4__City_city_component__["a" /* CityComponent */], },
+    { path: 'event', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_5__Event_event_component__["a" /* EventComponent */] },
+    { path: 'date', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_6__Date_date_component__["a" /* DateComponent */] },
+    { path: 'mood', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_7__Mood_mood_component__["a" /* MoodComponent */] },
+    { path: 'result', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_8__Result_result_component__["a" /* ResultComponent */] },
 ];
 var PagesModule = (function () {
     function PagesModule() {
@@ -597,7 +597,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     // { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_2__Pages_Main_main_component__["a" /* MainComponent */] },
+    { path: '', pathMatch: 'full', component: __WEBPACK_IMPORTED_MODULE_2__Pages_Main_main_component__["a" /* MainComponent */] },
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
